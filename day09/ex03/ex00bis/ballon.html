@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Piscine PHP : exercise 03 of day 09">
+		<meta name="keywords" content="42SiliconValley, Piscine, PHP, HTML, CSS, Day09, ex03">
+		<meta name="author" content="Aidan Lim(@dlim)">
+		<title>Ballon</title>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+		<style>
+			#ballon {
+				width: 200px;
+				height: 200px;
+
+				background-color: red;
+				border-radius: 50%;
+			}
+		</style>
+		<script>
+			$(document).ready(function() {
+				var colors = ["red", "green", "blue"];
+
+				var i = 1;
+
+				$("#ballon").click(function() {
+					var ballon = $("#ballon");
+
+					if(ballon.width() + 10 <= 420) {
+						ballon.css("width", ballon.width() + 10 + "px");
+						ballon.css("height", ballon.height() + 10 + "px");
+					} else {
+						ballon.css("width", "200px");
+						ballon.css("height", "200px");
+					}
+
+					colorBallon();
+				});
+
+				$("#ballon").mouseleave(function() {
+					var ballon = $("#ballon");
+
+					if(ballon.width() !== 200) {
+						ballon.css("width", ballon.width() - 5 + "px");
+						ballon.css("height", ballon.height() - 5 + "px");
+					}
+
+					i = (i === 1 ? 2 : i - 2);
+					colorBallon();
+				})
+
+				function colorBallon() {
+					$("#ballon").css("backgroundColor", colors[i % 3]);
+					i++;
+				}
+			});	
+		</script>
+	</head>
+	<body>
+		<div id="ballon"></div>
+	</body>
+</html>

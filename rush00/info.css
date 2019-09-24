@@ -1,0 +1,10 @@
+.contact-info, .user-registration {
+    background-color : grey;
+    align-content : center;
+    text-align : center;
+    width : 50%;
+}
+
+.user-registration {
+    color : goldenrod;
+}

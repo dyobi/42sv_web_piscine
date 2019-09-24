@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Piscine PHP : exercise 01 of day 09">
+		<meta name="keywords" content="42SiliconValley, Piscine, PHP, HTML, CSS, Day09, ex01">
+		<meta name="author" content="Aidan Lim(@dlim)">
+        <title>Calc</title>
+        <script>
+            setInterval(function() {
+                alert("Please, use me...");
+            }, 30000);
+
+            function calc() {
+                var lt = document.getElementById("lt").value;
+                var op = document.getElementById("op").value;
+                var rt = document.getElementById("rt").value;
+
+                if(lt === '' || lt < 0 || rt === '' || rt < 0) {
+                    alert("Error :(");
+                    return;
+                }
+
+                if((op === '/' || op === '%') && rt == 0) {
+                    console.log("It’s over 9000!");
+                    alert("It’s over 9000!");
+                    return;
+                }
+
+                var result = 0;
+
+                if(op === '+')
+                    result = parseInt(lt) + parseInt(rt);
+                if(op === '-')
+                    result = parseInt(lt) - parseInt(rt);
+                if(op === '*')
+                    result = parseInt(lt) * parseInt(rt);
+                if(op === '/')
+                    result = parseInt(lt) / parseInt(rt);
+                if(op === '%')
+                    result = parseInt(lt) % parseInt(rt);
+
+                console.log(result);
+                alert(result);
+            }
+        </script>
+	</head>
+	<body>
+        <input type="number" id="lt">
+        <select id="op">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>%</option>
+        </select>
+        <input type="number" id="rt">
+        <input type="submit" onclick="calc()" value="Try me!">
+	</body>
+</html>

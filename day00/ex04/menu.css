@@ -1,0 +1,41 @@
+body {
+	background: chocolate;
+	background-size: 100%;
+}
+.title {
+	text-align: center;
+	color:yellow;
+	font-size: 7vw;
+}
+.dropdown {
+	position: relative;
+	text-align: center;
+	margin-top: 20vw;
+}
+.butt {
+	width:calc(100% - 300px);
+	background: chartreuse;
+	background-size: 10%;
+	color: darkorchid;
+	font-size: 3vw;
+	text-align: center;
+	border-radius: 11px;
+}
+.butt_contents {
+	margin-left: calc(50% - (100% - 300px) / 2);
+	width: calc(100% - 300px);
+	display: none;
+	position: absolute;
+	border-radius: 11px;
+	background: darkorange;
+}
+.butt_contents a {
+	color: blue;
+	font-size: 3vw;
+	display: block;
+	border-radius: 11px;
+	box-shadow: 1px 1px 1px red;
+}
+.butt_contents a:hover {background: #ddd;}
+.dropdown:hover .butt_contents {display: block;}
+.dropdown:hover .butt {background: blanchedalmond;}

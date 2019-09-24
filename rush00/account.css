@@ -1,0 +1,25 @@
+main {
+    display : inline-block;
+}
+
+.user-changes {
+    padding : 10px;
+    width : 400px;
+    background-color : grey;
+    text-align: center;
+    display : block;
+}
+
+.pwd-change .user-delete {
+    background-color : blue;
+}
+
+.cart {
+    background : grey;
+    width : 100px;
+}
+
+h1, h3, input[type=submit] {
+    color : goldenrod;
+    text-align : center;
+}

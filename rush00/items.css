@@ -1,0 +1,82 @@
+/* TODO: Create a solid background for images to be placed on
+.bg {
+    margin : 10vw;
+    padding : 1vh;
+    border-radius: 4vw;
+    height : 50%;
+    width : 50%;
+    background-color : grey;
+    text-align : center;
+    color : goldenrod;
+    text-decoration : bold;
+}
+*/
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#item {
+	width:100px;
+	height:100px;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav {
+  color: dodgerblue;
+}
+
+/* ADDED ON FOR FORM */
+img#Goku, img#OnePunchMan {
+  float : left;
+  width : 200px;
+  height : 200px;
+}
+
+img#BMC, img#GlueDeluxe, img#LineTape, img#NoseCutter {
+  float : left;
+  width : 200px;
+  height : 200px;
+}
+
+img#zakuIII, img#zakuII, img#zerachiel, img#karl {
+  float : left;
+  width : 200px;
+  height : 200px;
+}
+
+img#banshee, img#DoubleX, img#Phenex, img#SengokuAstray {
+  float : left;
+  width : 200px;
+  height : 200px;
+}
+
+img#justice, img#RX-78, img#sinanju, img#XXXG-00W0 {
+  float : left;
+  width : 200px;
+  height : 200px;
+}
+
+.item {
+  display : inline-block;
+  background-color : rgba(28, 31, 36, 0.9);
+}
+
+.item-description {
+  float : right;
+}
+
+h2 {
+  color : dodgerblue;
+}
+

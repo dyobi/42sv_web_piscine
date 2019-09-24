@@ -1,0 +1,15 @@
+form #register {
+    text-align : center;
+}
+
+.user-authentication {
+    margin : 10vw;
+    padding : 1vh;
+    border-radius: 4vw;
+    height : 50%;
+    width : 50%;
+    background-color : grey;
+    text-align : center;
+    color : goldenrod;
+    text-decoration : bold;
+}

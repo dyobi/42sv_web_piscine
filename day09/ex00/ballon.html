@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Piscine PHP : exercise 00 of day 09">
+		<meta name="keywords" content="42SiliconValley, Piscine, PHP, HTML, CSS, Day09, ex00">
+		<meta name="author" content="Aidan Lim(@dlim)">
+		<title>Ballon</title>
+		<style>
+			#ballon {
+				width: 200px;
+				height: 200px;
+
+				background-color: red;
+				border-radius: 50%;
+			}
+		</style>
+		<script>
+			var colors = ["red", "green", "blue"];
+
+			var i = 1;
+
+			function clickBallon() {
+				var ballon = document.getElementById("ballon");
+				if(ballon.offsetWidth + 10 <= 420) {
+					ballon.style.width = ballon.offsetWidth + 10 + "px";
+					ballon.style.height = ballon.offsetHeight + 10 + "px";
+				} else {
+					ballon.style.width = "200px";
+					ballon.style.height = "200px";
+				}
+				colorBallon();
+			}
+
+			function mouseOutBallon() {
+				if(ballon.offsetWidth !== 200) {
+					ballon.style.width = ballon.offsetWidth - 5 + "px";
+					ballon.style.height = ballon.offsetHeight - 5 + "px";
+				}
+				i = (i === 1 ? 2 : i - 2);
+				colorBallon();
+				
+			}
+
+			function colorBallon() {
+				ballon.style.backgroundColor = colors[i % 3];
+				i++;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="ballon" onclick="clickBallon()" onmouseout="mouseOutBallon()"></div>
+	</body>
+</html>
